@@ -8,35 +8,35 @@ html {
 
 body {
 
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-
-    background: #080808;
-    color: white;
+    margin:0;
+    font-family:'Montserrat', sans-serif;
+    background:#080808;
+    color:white;
 
 }
 
 
-/* HEADER */
-
 header {
+
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:20;
 
     display:flex;
     justify-content:space-between;
     align-items:center;
 
-    padding:30px 8%;
-
-    position:absolute;
-    width:100%;
-    z-index:10;
+    padding:35px 8%;
 
 }
 
 
+
 .logo {
 
-    font-size:26px;
+    font-size:28px;
     font-weight:800;
     letter-spacing:2px;
 
@@ -46,11 +46,9 @@ header {
 .logo span {
 
     display:block;
-
     color:#D4AF37;
 
     font-size:12px;
-
     letter-spacing:8px;
 
 }
@@ -60,15 +58,22 @@ header {
 nav a {
 
     color:white;
-
     text-decoration:none;
 
     margin-left:35px;
 
     font-size:14px;
 
+    transition:.3s;
+
 }
 
+
+nav a:hover {
+
+    color:#D4AF37;
+
+}
 
 
 
@@ -79,20 +84,15 @@ nav a {
 
     min-height:100vh;
 
+    position:relative;
+
     display:flex;
 
     align-items:center;
 
     padding:8%;
 
-    background:
-
-    linear-gradient(
-    rgba(0,0,0,.45),
-    rgba(0,0,0,.95)
-    ),
-
-    url("images/hero.jpg");
+    background-image:url("images/hero.jpg");
 
     background-size:cover;
 
@@ -102,15 +102,35 @@ nav a {
 
 
 
-.hero-content {
+.overlay {
 
-    max-width:700px;
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+    90deg,
+    rgba(0,0,0,.85),
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.85)
+    );
 
 }
 
 
 
-.gold-text {
+.hero-content {
+
+    position:relative;
+
+    max-width:750px;
+
+}
+
+
+
+.gold-label {
 
     color:#D4AF37;
 
@@ -118,20 +138,32 @@ nav a {
 
     font-size:14px;
 
+    margin-bottom:25px;
+
 }
 
 
 
-h1 {
+.hero h1 {
 
-    font-size:80px;
+    font-size:90px;
 
-    line-height:1;
+    line-height:.95;
 
-    margin:20px 0;
+    margin:0;
 
     text-shadow:
-    0 0 40px rgba(212,175,55,.3);
+    0 0 40px rgba(212,175,55,.35);
+
+}
+
+
+
+.hero h2 {
+
+    font-size:32px;
+
+    margin:30px 0 10px;
 
 }
 
@@ -141,7 +173,47 @@ h1 {
 
     font-size:22px;
 
-    line-height:1.6;
+    color:#ddd;
+
+}
+
+
+
+.balkan-box {
+
+    margin-top:35px;
+
+    display:inline-block;
+
+    padding:18px 30px;
+
+    border:1px solid rgba(212,175,55,.45);
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+
+.balkan-box div {
+
+    color:#D4AF37;
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.balkan-box span {
+
+    font-size:28px;
 
 }
 
@@ -157,19 +229,20 @@ h1 {
 }
 
 
+
 .btn {
 
     display:inline-block;
 
     padding:16px 35px;
 
-    border:1px solid #D4AF37;
-
-    color:white;
+    margin-right:15px;
 
     text-decoration:none;
 
-    margin-right:15px;
+    color:white;
+
+    border:1px solid #D4AF37;
 
     transition:.3s;
 
@@ -179,7 +252,7 @@ h1 {
 
 .btn:hover {
 
-    transform:translateY(-4px);
+    transform:translateY(-5px);
 
 }
 
@@ -196,20 +269,21 @@ h1 {
 
 
 
-/* SECTIONS */
+
+/* GENERAL SECTIONS */
 
 
 .section {
 
-    padding:90px 8%;
+    padding:100px 8%;
 
 }
 
 
 
-.dark {
+.about {
 
-    background:#111;
+    background:#080808;
 
 }
 
@@ -217,7 +291,7 @@ h1 {
 
 h2 {
 
-    font-size:42px;
+    font-size:45px;
 
     line-height:1.2;
 
@@ -238,37 +312,92 @@ h2 {
 
 
 
-/* IMAGE */
+
+/* FULL IMAGE SECTIONS */
 
 
-.image-box {
+.image-section {
 
-    margin-bottom:50px;
+    min-height:90vh;
 
-}
+    display:flex;
 
+    align-items:center;
 
-.image-box img {
+    padding:8%;
 
-    width:100%;
+    position:relative;
 
-    max-height:500px;
+    background-size:cover;
 
-    object-fit:cover;
-
-    border-radius:15px;
-
-    border:1px solid rgba(212,175,55,.25);
+    background-position:center;
 
 }
 
 
 
+.creators {
 
-/* CARDS */
+    background-image:
+    linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.85)
+    ),
+    url("images/creators.jpg");
+
+}
 
 
-.cards {
+
+.gaming {
+
+    background-image:
+    linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.85)
+    ),
+    url("images/gaming.jpg");
+
+}
+
+
+
+.brands {
+
+    background-image:
+    linear-gradient(
+    rgba(0,0,0,.65),
+    rgba(0,0,0,.85)
+    ),
+    url("images/brands.jpg");
+
+}
+
+
+
+
+.dark-box {
+
+    max-width:900px;
+
+    background:rgba(0,0,0,.45);
+
+    padding:50px;
+
+    border-left:3px solid #D4AF37;
+
+    backdrop-filter:blur(8px);
+
+}
+
+
+
+
+
+/* FEATURES */
+
+
+.feature-grid {
 
     display:flex;
 
@@ -282,26 +411,17 @@ h2 {
 
 
 
-.card {
+.feature-grid > div {
 
     flex:1;
 
-    min-width:240px;
+    min-width:220px;
 
-    padding:35px;
+    padding:30px;
 
-    background:
+    background:rgba(10,10,10,.75);
 
-    linear-gradient(
-    145deg,
-    #181818,
-    #0d0d0d
-    );
-
-
-    border:1px solid rgba(212,175,55,.2);
-
-    border-radius:15px;
+    border:1px solid rgba(212,175,55,.25);
 
     transition:.3s;
 
@@ -309,7 +429,7 @@ h2 {
 
 
 
-.card:hover {
+.feature-grid > div:hover {
 
     transform:translateY(-8px);
 
@@ -319,23 +439,35 @@ h2 {
 
 
 
-.card i {
+.feature-grid i {
+
+    color:#D4AF37;
 
     font-size:35px;
 
-    color:#D4AF37;
-
-    margin-bottom:20px;
-
 }
 
 
 
-.card h3 {
+.feature-grid h3 {
 
     color:#D4AF37;
 
 }
+
+
+
+
+
+.community {
+
+    text-align:center;
+
+    background:#111;
+
+}
+
+
 
 
 
@@ -357,11 +489,12 @@ h2 {
 }
 
 
+
 .contact i {
 
     color:#D4AF37;
 
-    margin-right:10px;
+    margin-right:12px;
 
 }
 
@@ -374,11 +507,12 @@ footer {
 
     padding:40px;
 
-    color:#D4AF37;
-
     border-top:1px solid #222;
 
+    color:#D4AF37;
+
 }
+
 
 
 
@@ -398,6 +532,7 @@ header {
 }
 
 
+
 nav a {
 
     margin:0 10px;
@@ -406,9 +541,17 @@ nav a {
 
 
 
-h1 {
+.hero h1 {
 
-    font-size:50px;
+    font-size:55px;
+
+}
+
+
+
+.hero h2 {
+
+    font-size:25px;
 
 }
 
@@ -416,22 +559,23 @@ h1 {
 
 h2 {
 
-    font-size:32px;
+    font-size:35px;
 
 }
 
 
 
-.cards {
+.dark-box {
+
+    padding:30px;
+
+}
+
+
+
+.feature-grid {
 
     flex-direction:column;
-
-}
-
-
-.btn {
-
-    margin-bottom:15px;
 
 }
 
