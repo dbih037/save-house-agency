@@ -1,3 +1,5 @@
+/* CSS Document */
+
 * {
     box-sizing: border-box;
 }
@@ -1785,14 +1787,15 @@ nav a:hover::after {
         min-height: 100svh;
 
         padding:
-            100px 6%
+            105px 6%
             45px;
 
-        align-items: flex-end;
+        align-items: center;
 
-        background-position:
-            center top;
-
+        /* Mobile hero: clean cinematic background without owners */
+        background-image: url("images/hero.jpg");
+        background-size: cover;
+        background-position: center center;
         background-attachment: scroll;
     }
 
@@ -1800,10 +1803,9 @@ nav a:hover::after {
         background:
             linear-gradient(
                 180deg,
-                rgba(0,0,0,.05) 0%,
-                rgba(0,0,0,.08) 25%,
-                rgba(0,0,0,.62) 58%,
-                rgba(0,0,0,.96) 100%
+                rgba(0,0,0,.30) 0%,
+                rgba(0,0,0,.48) 40%,
+                rgba(0,0,0,.88) 100%
             );
     }
 
@@ -1863,33 +1865,7 @@ nav a:hover::after {
     /* ---------- OWNER NAMES ---------- */
 
     .owner-label {
-        top: 31%;
-
-        width: 44%;
-    }
-
-    .owner-left {
-        left: 4%;
-        text-align: left;
-    }
-
-    .owner-right {
-        right: 4%;
-        text-align: right;
-    }
-
-    .signature {
-        font-size: 31px;
-    }
-
-    .owner-label strong {
-        font-size: 8px;
-        letter-spacing: .7px;
-    }
-
-    .owner-label span {
-        font-size: 7px;
-        letter-spacing: 1.5px;
+        display: none;
     }
 
 
