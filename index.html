@@ -554,7 +554,42 @@ Kreativan sadržaj za brendove.
 
 </footer>
 
+<script>
+const header = document.querySelector("header");
+const progress = document.querySelector(".page-progress");
 
+window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 40);
+
+    const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+    const scrolled = height > 0
+        ? (window.scrollY / height) * 100
+        : 0;
+
+    progress.style.width = scrolled + "%";
+});
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+    });
+}, {
+    threshold: 0.12
+});
+
+document.querySelectorAll(
+    ".about-inner, .dark-box, .community-content, .contact-inner"
+).forEach(el => {
+    el.classList.add("reveal");
+    observer.observe(el);
+});
+</script>
 
 </body>
+    <div class="page-progress"></div>
 </html>
