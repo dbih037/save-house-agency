@@ -2211,3 +2211,122 @@ nav a:hover::after {
 .contact-secondary i {
     color: #D4AF37;
 }
+/* =====================================================
+   V4.1 — MOBILE FINAL SPACING
+===================================================== */
+
+@media(max-width:800px) {
+
+    /* HERO
+       Malo bolj kompakten zaključek prvega ekrana */
+    .owners-hero {
+        min-height: 92svh;
+        padding-bottom: 32px;
+    }
+
+
+    /* ABOUT */
+    .about {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .about-inner {
+        gap: 28px;
+    }
+
+    .about-points {
+        margin-top: 24px;
+        gap: 14px;
+    }
+
+    .about-points div {
+        padding-top: 14px;
+    }
+
+
+    /* CREATORS / GAMING / BRANDS
+       Manj praznega prostora okoli content boxov */
+    .image-section {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+
+    /* COMMUNITY
+       Trenutno je sekcija previsoka glede na količino vsebine */
+    .community {
+        min-height: auto;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .community-content {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+
+    /* CONTACT
+       Odstranimo občutek velike črne praznine nad naslovom */
+    .contact {
+        padding-top: 60px;
+        padding-bottom: 55px;
+    }
+
+    .contact-inner {
+        gap: 38px;
+    }
+
+
+    /* CTA BUTTONS
+       Email + Instagram imata popolnoma enako višino in spacing */
+    .contact-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+
+        margin-top: 28px;
+    }
+
+    .contact-actions a {
+        width: 100%;
+        min-height: 58px;
+
+        margin: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 16px 20px;
+    }
+
+
+    /* CONTACT DETAILS
+       Malo bližje CTA delu */
+    .contact-details {
+        margin-top: 4px;
+        padding-left: 20px;
+    }
+
+    .contact-list {
+        margin-top: 30px;
+    }
+
+    .contact-list a {
+        margin: 15px 0;
+    }
+
+    .contact-region {
+        margin-top: 30px;
+        padding-top: 22px;
+    }
+
+
+    /* FOOTER */
+    .footer {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+}
