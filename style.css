@@ -2196,3 +2196,18 @@ nav a:hover::after {
     }
 
 }
+/* FIX - EMAIL BUTTON ICON */
+
+.contact-primary i,
+.contact-secondary i {
+    display: inline-block;
+    color: #080808;
+    font-size: 14px;
+    margin: 0;
+    width: auto;
+    line-height: 1;
+}
+
+.contact-secondary i {
+    color: #D4AF37;
+}
