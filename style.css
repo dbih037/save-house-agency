@@ -858,3 +858,146 @@ h2 {
     }
 
 }
+/* ===== ABOUT SAVE HOUSE ===== */
+
+.about {
+    position: relative;
+    overflow: hidden;
+
+    padding: 120px 8%;
+
+    background:
+        radial-gradient(
+            circle at 85% 50%,
+            rgba(212,175,55,.10),
+            transparent 30%
+        ),
+        #080808;
+}
+
+.about::after {
+    content: "SH";
+
+    position: absolute;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: 260px;
+    font-weight: 800;
+    line-height: 1;
+
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(212,175,55,.08);
+
+    pointer-events: none;
+}
+
+.about-inner {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1300px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.about-title h2 {
+    margin: 20px 0 0;
+
+    font-size: clamp(42px, 4.5vw, 72px);
+    line-height: 1.02;
+    letter-spacing: -2px;
+}
+
+.about-title h2 span {
+    color: #D4AF37;
+}
+
+.about-content {
+    border-left: 1px solid rgba(212,175,55,.45);
+    padding-left: 45px;
+}
+
+.about-content p {
+    color: #aaa;
+    line-height: 1.8;
+    margin: 0 0 20px;
+}
+
+.about-content .about-lead {
+    color: white;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.about-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+
+    margin-top: 40px;
+}
+
+.about-points div {
+    padding-top: 18px;
+
+    border-top: 1px solid rgba(212,175,55,.35);
+}
+
+.about-points strong {
+    display: block;
+
+    color: #D4AF37;
+
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.about-points span {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #888;
+    font-size: 11px;
+}
+
+
+/* ABOUT MOBILE */
+
+@media(max-width:800px) {
+
+    .about {
+        padding: 80px 7%;
+    }
+
+    .about::after {
+        font-size: 150px;
+        right: -25px;
+        top: 25%;
+    }
+
+    .about-inner {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-title h2 {
+        font-size: 42px;
+    }
+
+    .about-content {
+        padding-left: 25px;
+    }
+
+    .about-points {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+}
