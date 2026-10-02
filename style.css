@@ -581,3 +581,130 @@ h2 {
 
 
 }
+/* ===== OWNERS HERO V3.1 ===== */
+
+.owners-hero {
+    min-height: 100vh;
+    background-image: url("images/owners-hero.jpg");
+    background-size: cover;
+    background-position: center center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.owners-hero .overlay {
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.12) 0%,
+            rgba(0,0,0,.15) 42%,
+            rgba(0,0,0,.82) 100%
+        );
+}
+
+.owners-hero .hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 850px;
+    margin-top: 300px;
+}
+
+.owners-hero .hero h1 {
+    margin: 0;
+}
+
+.owners-hero h1 {
+    font-size: clamp(55px, 6vw, 92px);
+    line-height: .9;
+    letter-spacing: -3px;
+}
+
+.owners-hero h1 span {
+    display: block;
+    margin-top: 12px;
+    color: #D4AF37;
+    font-size: .35em;
+    letter-spacing: 14px;
+}
+
+.owners-hero h2 {
+    margin: 22px 0 8px;
+}
+
+.owner-label {
+    position: absolute;
+    z-index: 4;
+    top: 67%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    text-shadow: 0 2px 15px #000;
+}
+
+.owner-left {
+    left: 5%;
+}
+
+.owner-right {
+    right: 5%;
+    text-align: right;
+}
+
+.owner-label strong {
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.owner-label span {
+    margin-top: 5px;
+    color: #D4AF37;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+@media(max-width: 800px) {
+
+    .owners-hero {
+        min-height: 100svh;
+        background-position: center top;
+    }
+
+    .owners-hero .hero-content {
+        margin-top: 300px;
+    }
+
+    .owners-hero h1 {
+        font-size: 48px;
+        letter-spacing: -1px;
+    }
+
+    .owners-hero h1 span {
+        letter-spacing: 8px;
+    }
+
+    .owner-label {
+        top: 35%;
+    }
+
+    .owner-label strong {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+
+    .owner-label span {
+        font-size: 8px;
+    }
+
+    .owner-left {
+        left: 4%;
+    }
+
+    .owner-right {
+        right: 4%;
+    }
+
+    .balkan-box span {
+        font-size: 21px;
+    }
+}
