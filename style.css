@@ -1339,3 +1339,884 @@ h2 {
     }
 
 }
+/* =====================================================
+   SAVE HOUSE AGENCY — V4 FINAL POLISH
+===================================================== */
+
+
+/* ---------- GLOBAL ---------- */
+
+:root {
+    --gold: #D4AF37;
+    --gold-soft: #b89632;
+    --black: #050505;
+    --text-soft: #aaa;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+::selection {
+    background: var(--gold);
+    color: #000;
+}
+
+
+/* ---------- SCROLL PROGRESS ---------- */
+
+.page-progress {
+    position: fixed;
+    z-index: 9999;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        #8e7223,
+        #D4AF37,
+        #f1d778
+    );
+
+    box-shadow: 0 0 12px rgba(212,175,55,.55);
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header {
+    position: fixed;
+
+    transition:
+        background .35s ease,
+        padding .35s ease,
+        backdrop-filter .35s ease,
+        border-color .35s ease;
+
+    border-bottom: 1px solid transparent;
+}
+
+header.scrolled {
+    padding-top: 18px;
+    padding-bottom: 18px;
+
+    background: rgba(5,5,5,.82);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom:
+        1px solid rgba(212,175,55,.12);
+}
+
+.logo {
+    transition: transform .3s ease;
+}
+
+.logo:hover {
+    transform: translateY(-2px);
+}
+
+nav a {
+    position: relative;
+    padding-bottom: 6px;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--gold);
+
+    transition: width .3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.owners-hero {
+    background-attachment: fixed;
+}
+
+.owners-hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 30%,
+            rgba(0,0,0,.25) 100%
+        );
+}
+
+.owners-hero .hero-content,
+.owner-label {
+    z-index: 5;
+}
+
+
+/* gold label line */
+
+.gold-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.gold-label::before {
+    content: "";
+
+    width: 30px;
+    height: 1px;
+
+    background: var(--gold);
+}
+
+
+/* Hero buttons */
+
+.btn {
+    position: relative;
+    overflow: hidden;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background .3s ease;
+}
+
+.btn.gold:hover {
+    box-shadow:
+        0 8px 30px rgba(212,175,55,.22);
+}
+
+.btn:not(.gold):hover {
+    background: rgba(212,175,55,.08);
+}
+
+
+/* Balkan badge */
+
+.balkan-box {
+    transition:
+        border-color .3s ease,
+        background .3s ease;
+}
+
+.balkan-box:hover {
+    border-color: rgba(212,175,55,.8);
+    background: rgba(0,0,0,.62);
+}
+
+
+/* =====================================================
+   IMAGE SECTIONS
+===================================================== */
+
+.image-section {
+    background-attachment: fixed;
+}
+
+.dark-box {
+    transition:
+        border-color .4s ease,
+        background .4s ease;
+}
+
+.dark-box:hover {
+    border-left-color: #f0cc5c;
+    background: rgba(0,0,0,.55);
+}
+
+
+/* feature cards */
+
+.feature-grid > div {
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-grid > div::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--gold);
+
+    transition: width .4s ease;
+}
+
+.feature-grid > div:hover::before {
+    width: 100%;
+}
+
+
+/* =====================================================
+   REVEAL ANIMATION
+===================================================== */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =====================================================
+   COMMUNITY
+===================================================== */
+
+.community {
+    background-attachment: fixed;
+}
+
+.community-content {
+    transition:
+        border-color .4s ease,
+        background .4s ease;
+}
+
+.community-content:hover {
+    background: rgba(0,0,0,.52);
+
+    border-color:
+        rgba(212,175,55,.7);
+}
+
+.community-features div {
+    transition:
+        color .25s ease,
+        transform .25s ease;
+}
+
+.community-features div:hover {
+    color: var(--gold);
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   CONTACT
+===================================================== */
+
+.contact-primary:hover {
+    background: #e1bf4a;
+}
+
+.contact-secondary:hover {
+    border-color: var(--gold);
+}
+
+
+/* =====================================================
+   DESKTOP LARGE SCREENS
+===================================================== */
+
+@media(min-width: 1500px) {
+
+    header {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .hero,
+    .image-section {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .about,
+    .contact {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .dark-box {
+        max-width: 950px;
+    }
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media(max-width: 1000px) {
+
+    .owners-hero,
+    .image-section,
+    .community {
+        background-attachment: scroll;
+    }
+
+    .about-inner {
+        gap: 60px;
+    }
+
+    .contact-inner {
+        gap: 65px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE — IMPORTANT
+===================================================== */
+
+@media(max-width: 800px) {
+
+    /* ---------- GLOBAL ---------- */
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .section {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+
+    /* ---------- HEADER ---------- */
+
+    header {
+        position: fixed;
+
+        flex-direction: row;
+        justify-content: space-between;
+
+        padding: 18px 6%;
+
+        gap: 10px;
+
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0,0,0,.8),
+                transparent
+            );
+    }
+
+    header.scrolled {
+        padding: 13px 6%;
+
+        background: rgba(5,5,5,.92);
+    }
+
+    .logo {
+        font-size: 18px;
+        line-height: 1;
+    }
+
+    .logo span {
+        margin-top: 4px;
+
+        font-size: 7px;
+        letter-spacing: 5px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+
+        gap: 13px;
+    }
+
+    nav a {
+        margin: 0;
+
+        padding: 5px 0;
+
+        font-size: 9px;
+        letter-spacing: .5px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .owners-hero {
+        min-height: 100svh;
+
+        padding:
+            100px 6%
+            45px;
+
+        align-items: flex-end;
+
+        background-position:
+            center top;
+
+        background-attachment: scroll;
+    }
+
+    .owners-hero .overlay {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(0,0,0,.05) 0%,
+                rgba(0,0,0,.08) 25%,
+                rgba(0,0,0,.62) 58%,
+                rgba(0,0,0,.96) 100%
+            );
+    }
+
+    .owners-hero .hero-content {
+        width: 100%;
+
+        margin-top: 0;
+
+        text-align: center;
+    }
+
+    .gold-label {
+        justify-content: center;
+
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .gold-label::before {
+        width: 18px;
+    }
+
+    .owners-hero h1 {
+        margin-top: 15px;
+
+        font-size:
+            clamp(43px, 13vw, 58px);
+
+        line-height: .88;
+
+        letter-spacing: -2px;
+    }
+
+    .owners-hero h1 span {
+        margin-top: 11px;
+
+        font-size: .31em;
+        letter-spacing: 9px;
+    }
+
+    .owners-hero h2 {
+        margin: 18px 0 8px;
+
+        font-size: 19px;
+    }
+
+    .owners-hero .hero-content > p {
+        margin: 0 auto;
+
+        max-width: 330px;
+
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+
+    /* ---------- OWNER NAMES ---------- */
+
+    .owner-label {
+        top: 31%;
+
+        width: 44%;
+    }
+
+    .owner-left {
+        left: 4%;
+        text-align: left;
+    }
+
+    .owner-right {
+        right: 4%;
+        text-align: right;
+    }
+
+    .signature {
+        font-size: 31px;
+    }
+
+    .owner-label strong {
+        font-size: 8px;
+        letter-spacing: .7px;
+    }
+
+    .owner-label span {
+        font-size: 7px;
+        letter-spacing: 1.5px;
+    }
+
+
+    /* ---------- BALKAN ---------- */
+
+    .balkan-box {
+        margin-top: 20px;
+
+        padding: 12px 17px;
+    }
+
+    .balkan-box div {
+        margin-bottom: 8px;
+
+        font-size: 8px;
+        letter-spacing: 2px;
+    }
+
+    .balkan-box span {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+
+
+    /* ---------- HERO BUTTONS ---------- */
+
+    .buttons {
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 8px;
+
+        margin-top: 18px;
+    }
+
+    .btn {
+        margin: 0;
+
+        padding: 13px 8px;
+
+        font-size: 8px;
+        letter-spacing: .7px;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    .about {
+        padding:
+            75px 7%;
+    }
+
+    .about-inner {
+        gap: 35px;
+    }
+
+    .about-title h2 {
+        margin-top: 15px;
+
+        font-size:
+            clamp(37px, 11vw, 48px);
+
+        letter-spacing: -1.5px;
+    }
+
+    .about-content {
+        padding-left: 20px;
+    }
+
+    .about-content .about-lead {
+        font-size: 16px;
+    }
+
+    .about-content p {
+        font-size: 13px;
+    }
+
+    .about-points {
+        margin-top: 30px;
+    }
+
+
+    /* ---------- CREATORS / GAMING / BRANDS ---------- */
+
+    .image-section {
+        min-height: auto;
+
+        padding:
+            85px 6%;
+
+        background-attachment: scroll;
+        background-position: center;
+    }
+
+    .dark-box {
+        width: 100%;
+
+        padding:
+            30px 22px;
+
+        border-left-width: 2px;
+
+        backdrop-filter: blur(5px);
+    }
+
+    .dark-box > h2 {
+        margin-top: 0;
+
+        font-size:
+            clamp(31px, 9vw, 42px);
+    }
+
+    .dark-box > p {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+    .feature-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        margin-top: 25px;
+    }
+
+    .feature-grid > div {
+        min-width: 0;
+
+        padding: 20px;
+    }
+
+    .feature-grid i {
+        font-size: 25px;
+    }
+
+    .feature-grid h3 {
+        margin:
+            12px 0 5px;
+
+        font-size: 15px;
+    }
+
+    .feature-grid p {
+        margin: 0;
+
+        font-size: 11px;
+    }
+
+
+    /* ---------- COMMUNITY ---------- */
+
+    .community {
+        min-height: 75vh;
+
+        padding:
+            75px 6%;
+
+        background-position: center;
+        background-attachment: scroll;
+    }
+
+    .community-overlay {
+        background:
+            linear-gradient(
+                rgba(0,0,0,.5),
+                rgba(0,0,0,.78)
+            );
+    }
+
+    .community-content {
+        width: 100%;
+
+        padding:
+            32px 18px;
+    }
+
+    .community h2 {
+        font-size:
+            clamp(36px, 10vw, 45px);
+    }
+
+    .community-content > p {
+        font-size: 13px;
+    }
+
+    .community-features {
+        display: grid;
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 18px 10px;
+
+        margin-top: 28px;
+    }
+
+    .community-features div {
+        justify-content: center;
+
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+
+
+    /* ---------- CONTACT ---------- */
+
+    .contact {
+        padding:
+            80px 7%
+            65px;
+    }
+
+    .contact-inner {
+        gap: 55px;
+    }
+
+    .contact-main h2 {
+        margin-top: 15px;
+
+        font-size:
+            clamp(50px, 15vw, 68px);
+
+        line-height: .88;
+
+        letter-spacing: -3px;
+    }
+
+    .contact-main > p {
+        font-size: 13px;
+    }
+
+    .contact-actions {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        margin-top: 30px;
+    }
+
+    .contact-details {
+        padding-left: 22px;
+    }
+
+    .contact-brand {
+        font-size: 24px;
+    }
+
+    .contact-list a {
+        font-size: 11px;
+
+        word-break: break-word;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer {
+        padding:
+            28px 6%;
+
+        font-size: 8px;
+        line-height: 1.7;
+    }
+
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
+
+@media(max-width: 390px) {
+
+    nav {
+        gap: 9px;
+    }
+
+    nav a {
+        font-size: 8px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .owners-hero h1 {
+        font-size: 42px;
+    }
+
+    .buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-main h2 {
+        font-size: 48px;
+    }
+
+}
+
+
+/* =====================================================
+   REDUCED MOTION / ACCESSIBILITY
+===================================================== */
+
+@media(prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+
+    .owners-hero,
+    .image-section,
+    .community {
+        background-attachment: scroll;
+    }
+
+}
