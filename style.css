@@ -2356,16 +2356,27 @@ nav a:hover::after {
 .contact-discord {
     display: flex;
     align-items: center;
-    gap: 14px;
-    margin: 15px 0;
+    gap: 15px;
+    margin: 18px 0;
+    color: #ccc;
+    font-size: 13px;
 }
 
 .contact-discord i {
-    color: #D4AF37;
     width: 20px;
+    min-width: 20px;
+    margin-right: 0;
+    color: #D4AF37;
     text-align: center;
 }
 
 .contact-discord span {
-    color: #fff;
+    color: inherit;
+}
+
+@media(max-width:800px) {
+    .contact-discord {
+        margin: 15px 0;
+        font-size: 11px;
+    }
 }
