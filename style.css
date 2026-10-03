@@ -2412,3 +2412,24 @@ nav a:hover::after {
         font-size: 11px;
     }
 }
+/* FINAL — CONTACT ROW ALIGNMENT */
+.contact-list a,
+.contact-list .contact-discord {
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+
+.contact-list a i,
+.contact-list .contact-discord i {
+    flex: 0 0 20px;
+    width: 20px;
+    margin: 0 15px 0 0 !important;
+    text-align: center;
+}
+
+.contact-list a span,
+.contact-list .contact-discord span {
+    margin: 0;
+    padding: 0;
+}
