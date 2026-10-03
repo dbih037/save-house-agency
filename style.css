@@ -2353,3 +2353,19 @@ nav a:hover::after {
         margin: 0;
     }
 }
+.contact-discord {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 15px 0;
+}
+
+.contact-discord i {
+    color: #D4AF37;
+    width: 20px;
+    text-align: center;
+}
+
+.contact-discord span {
+    color: #fff;
+}
