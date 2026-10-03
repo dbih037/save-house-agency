@@ -2433,3 +2433,23 @@ nav a:hover::after {
     margin: 0;
     padding: 0;
 }
+/* CONTACT ICON + TEXT — EXACT ALIGNMENT */
+.contact-list a {
+    display: grid !important;
+    grid-template-columns: 28px 1fr;
+    column-gap: 10px;
+    align-items: center;
+}
+
+.contact-list a i {
+    width: 28px !important;
+    min-width: 28px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center;
+}
+
+.contact-list a span {
+    margin: 0 !important;
+    padding: 0 !important;
+}
