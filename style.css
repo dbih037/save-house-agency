@@ -2380,3 +2380,35 @@ nav a:hover::after {
         font-size: 11px;
     }
 }
+/* FINAL CONTACT ALIGNMENT */
+.contact-list a,
+.contact-list .contact-discord {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    column-gap: 15px;
+
+    margin: 18px 0;
+    color: #ccc;
+    font-size: 13px;
+}
+
+.contact-list a i,
+.contact-list .contact-discord i {
+    width: 20px;
+    margin: 0;
+    text-align: center;
+    color: #D4AF37;
+}
+
+.contact-list .contact-discord span {
+    color: inherit;
+}
+
+@media(max-width:800px) {
+    .contact-list a,
+    .contact-list .contact-discord {
+        margin: 15px 0;
+        font-size: 11px;
+    }
+}
